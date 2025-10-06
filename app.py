@@ -8,7 +8,7 @@ while True:
             user="root",
             password="db_pass123",
         )
-        print("✅ Connected to MySQL successfully!")
+        print("Connected to MySQL successfully!")
         break
     except mysql.connector.Error as err:
         print("❌ Connection failed, retrying in 3s:", err)
