@@ -7,7 +7,7 @@ while True:
         db = mysql.connector.connect(
             host="db",
             user="root",
-            password=os.env("DB_Pass"),
+            password=os.env("DB_PASS"),
         )
         print("Connected to MySQL successfully!")
         break
