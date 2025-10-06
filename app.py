@@ -1,3 +1,4 @@
+import os
 import mysql.connector
 import time
 
@@ -6,7 +7,7 @@ while True:
         db = mysql.connector.connect(
             host="db",
             user="root",
-            password="db_pass123",
+            password=os.env("DB_Pass"),
         )
         print("Connected to MySQL successfully!")
         break
