@@ -3,7 +3,7 @@ services:
   db:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: db_pass123
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
     ports:
       - "3306:3306"
      
@@ -16,5 +16,7 @@ services:
     depends_on:
        db:
           condition: service_healthy
+     environment:
+          DB_PASS: ${DB_PASS}  
                 
 
